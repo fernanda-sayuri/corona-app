@@ -1,0 +1,30 @@
+
+<div id="geral">
+    <h1 id="tipos">Espalhamento do Coronavírus</h1>
+      
+
+    <div>
+        <h2>Atualização em tempo real:</h2>
+
+        <div id="casos">
+            <label for="">País: </label>
+            <select (change)="onChange($event.target.value)">
+                <option disabled selected value>Escolher</option>
+                <option *ngFor="let location of locations" [value]="location.id">
+                    {{location.country + " " + location.province}}
+                </option>
+            </select>
+
+            <div id="casos2">
+                <label>Infectados: {{confirmed}}</label><br>
+                <label>Mortes: {{deaths}}</label><br>
+                <label>Curados: {{recovered}}</label>
+            </div>
+            
+        </div>  
+   
+
+    </div>
+</div>
+
+
